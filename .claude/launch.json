@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js Dev Server",
+      "runtimeExecutable": "/Users/user/.local/node/bin/node",
+      "runtimeArgs": ["/Users/user/Intencional/node_modules/.bin/next", "dev"],
+      "env": { "PATH": "/Users/user/.local/node/bin:/usr/bin:/bin" },
+      "port": 3000
+    }
+  ]
+}

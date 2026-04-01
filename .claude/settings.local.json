@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npm -v)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/user/**)",
+      "Bash(brew list:*)",
+      "Bash(command -v brew)",
+      "Bash(/opt/homebrew/bin/brew --version)",
+      "Bash(/usr/local/bin/brew --version)",
+      "Bash(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)",
+      "Bash(bash)",
+      "Bash(curl -fsSL https://nodejs.org/dist/v20.18.1/node-v20.18.1-darwin-arm64.tar.gz -o /tmp/node.tar.gz)",
+      "Bash(mkdir -p \"$HOME/.local\")",
+      "Bash(tar -xzf /tmp/node.tar.gz -C \"$HOME/.local\")",
+      "Bash(mv \"$HOME/.local/node-v20.18.1-darwin-arm64\" \"$HOME/.local/node\")",
+      "Bash(export PATH=\"$HOME/.local/node/bin:$PATH\")",
+      "Bash(npm install:*)",
+      "Bash(export PATH=$HOME/.local/node/bin:$PATH)",
+      "Bash(npm run:*)",
+      "Bash(pkill -f \"next dev\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(echo \"$HOME/.local/node/bin/npm\")",
+      "mcp__bda8747b-ad2f-4245-b0eb-4efa67e21c3e__execute_sql",
+      "mcp__9fcdf689-8473-4c43-8ecc-04210ab69421__deploy_to_vercel",
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
