@@ -28,10 +28,10 @@ export function Header({ onMenuToggle }: { onMenuToggle: () => void }) {
           </svg>
         </button>
 
-        <div>
-          <p className="text-sm font-medium text-brand-text-2">
-            {getGreeting()}
-            {profile?.nombre ? (
+        <div suppressHydrationWarning>
+          <p className="text-sm font-medium text-brand-text-2" suppressHydrationWarning>
+            <span>{getGreeting()}</span>
+            {profile?.nombre && (
               <span
                 className="font-semibold ml-1"
                 style={{
@@ -43,7 +43,7 @@ export function Header({ onMenuToggle }: { onMenuToggle: () => void }) {
               >
                 {profile.nombre}
               </span>
-            ) : ''}
+            )}
           </p>
         </div>
       </div>
