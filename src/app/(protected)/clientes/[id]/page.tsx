@@ -37,14 +37,16 @@ export default function ClienteDetailPage() {
   }, [supabase, id]);
 
   async function handleSave() {
-    await supabase
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const db = supabase as any;
+    await db
       .from('clientes')
       .update({
-        nombre_local: form.nombre_local,
-        direccion: form.direccion,
-        telefono: form.telefono,
-        horario_atencion: form.horario_atencion,
-        notas: form.notas,
+        nombre_local: form.nombre_local ?? null,
+        direccion: form.direccion ?? null,
+        telefono: form.telefono ?? null,
+        horario_atencion: form.horario_atencion ?? null,
+        notas: form.notas ?? null,
       })
       .eq('id', id);
     setCliente({ ...cliente!, ...form });
