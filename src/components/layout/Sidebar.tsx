@@ -69,37 +69,22 @@ const navItems = [
 
 function LogoSymbol() {
   return (
-    <svg width="32" height="36" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="32" height="42" viewBox="0 0 44 58" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="lgSide" x1="38" y1="2" x2="4" y2="42" gradientUnits="userSpaceOnUse">
+        <linearGradient id="lgSide" x1="42" y1="2" x2="2" y2="54" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#C07DD4" />
           <stop offset="45%" stopColor="#D055A8" />
           <stop offset="100%" stopColor="#D84E86" />
         </linearGradient>
       </defs>
-      {/* Pétalo inferior-izquierdo */}
-      <path
-        d="M20 36 C13 35 5 28 5 19 C5 14 9 11 13 13.5 C16.5 16 19 26 20 36z"
-        fill="url(#lgSide)"
-      />
-      {/* Pétalo izquierdo-centro */}
-      <path
-        d="M20 36 C15 27 11 16 15.5 7 C17.5 3 23 3 22.5 9.5 C22 18 21 27 20 36z"
-        fill="url(#lgSide)"
-        opacity="0.9"
-      />
-      {/* Pétalo grande superior-derecho */}
-      <path
-        d="M20 36 C24 25 34 15 38 6 C40 2 37.5 -1 33.5 1.5 C27 5.5 22 21 20 36z"
-        fill="url(#lgSide)"
-        opacity="0.85"
-      />
-      {/* Pétalo pequeño superior */}
-      <path
-        d="M20 36 C26 23 35 11 38 4 C39.5 1 43 2 41.5 5.5 C38.5 13 28 25 20 36z"
-        fill="url(#lgSide)"
-        opacity="0.68"
-      />
+      {/* Pétalo inferior-izquierdo (grande) */}
+      <path d="M34 28 C39 34 4 55 2 52 C0 49 29 22 34 28Z" fill="url(#lgSide)" />
+      {/* Pétalo superior-izquierdo (medio) */}
+      <path d="M34 28 C30 33 0 6 2 4 C4 2 38 23 34 28Z" fill="url(#lgSide)" opacity="0.9" />
+      {/* Pétalo superior-centro (medio) */}
+      <path d="M34 28 C30 31 15 2 17 1 C19 0 38 25 34 28Z" fill="url(#lgSide)" opacity="0.85" />
+      {/* Pétalo superior-derecho (fino) */}
+      <path d="M34 28 C37 29 42 3 41 2 C40 1 31 27 34 28Z" fill="url(#lgSide)" opacity="0.75" />
     </svg>
   );
 }

@@ -7,6 +7,18 @@ import { formatDate } from '@/lib/utils';
 import { generarMensajeAvisoVisita, abrirWhatsApp } from '@/lib/whatsapp';
 import type { ProximaVisita } from '@/types/database';
 
+const IconPhone = () => (
+  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+  </svg>
+);
+
+const IconCalendar = () => (
+  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+  </svg>
+);
+
 export default function AvisosPage() {
   const supabase = useSupabase();
   const { profile, loading: userLoading } = useUser();
@@ -69,8 +81,11 @@ export default function AvisosPage() {
 
       {/* Mañana */}
       <div>
-        <h3 className="text-sm font-medium text-brand-muted mb-3">
-          📱 Visitas de mañana ({proximas1.length})
+        <h3 className="section-title mb-3">
+          <div className="flex items-center gap-2">
+            <IconPhone />
+            Visitas de mañana ({proximas1.length})
+          </div>
         </h3>
         {proximas1.length > 0 ? (
           <div className="space-y-2">
@@ -89,7 +104,7 @@ export default function AvisosPage() {
                   </div>
                   {link ? (
                     <a href={link} target="_blank" className="btn-primary text-sm">
-                      📱 Avisar
+                      Avisar
                     </a>
                   ) : (
                     <span className="text-xs text-brand-muted">Sin teléfono</span>
@@ -105,8 +120,11 @@ export default function AvisosPage() {
 
       {/* Próximos 7 días */}
       <div>
-        <h3 className="text-sm font-medium text-brand-muted mb-3">
-          📅 Próximos 7 días ({proximas7.length})
+        <h3 className="section-title mb-3">
+          <div className="flex items-center gap-2">
+            <IconCalendar />
+            Próximos 7 días ({proximas7.length})
+          </div>
         </h3>
         {proximas7.length > 0 ? (
           <div className="space-y-2">
@@ -126,7 +144,7 @@ export default function AvisosPage() {
                   </div>
                   {link ? (
                     <a href={link} target="_blank" className="btn-secondary text-sm">
-                      📱 Avisar
+                      Avisar
                     </a>
                   ) : (
                     <span className="text-xs text-brand-muted">Sin tel.</span>

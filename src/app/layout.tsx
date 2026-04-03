@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Intencional — Sistema de Gestión',
   description: 'Sistema de gestión para distribución de esmaltes',
   manifest: '/manifest.json',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export const viewport: Viewport = {
