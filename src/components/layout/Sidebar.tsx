@@ -69,22 +69,26 @@ const navItems = [
 
 function LogoSymbol() {
   return (
-    <svg width="32" height="42" viewBox="0 0 44 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="32" height="37" viewBox="0 0 50 58" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="lgSide" x1="42" y1="2" x2="2" y2="54" gradientUnits="userSpaceOnUse">
+        <linearGradient id="lgSide" x1="45" y1="2" x2="1" y2="52" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#C07DD4" />
           <stop offset="45%" stopColor="#D055A8" />
           <stop offset="100%" stopColor="#D84E86" />
         </linearGradient>
       </defs>
-      {/* Pétalo inferior-izquierdo (grande) */}
-      <path d="M34 28 C39 34 4 55 2 52 C0 49 29 22 34 28Z" fill="url(#lgSide)" />
-      {/* Pétalo superior-izquierdo (medio) */}
-      <path d="M34 28 C30 33 0 6 2 4 C4 2 38 23 34 28Z" fill="url(#lgSide)" opacity="0.9" />
-      {/* Pétalo superior-centro (medio) */}
-      <path d="M34 28 C30 31 15 2 17 1 C19 0 38 25 34 28Z" fill="url(#lgSide)" opacity="0.85" />
-      {/* Pétalo superior-derecho (fino) */}
-      <path d="M34 28 C37 29 42 3 41 2 C40 1 31 27 34 28Z" fill="url(#lgSide)" opacity="0.75" />
+      {/* Pétalo inferior-izquierdo (grande, magenta) */}
+      <path d="M37 32 C42 42 7 55 4 50 C1 45 32 22 37 32Z"
+        fill="url(#lgSide)" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+      {/* Pétalo superior-izquierdo (violeta oscuro) */}
+      <path d="M37 32 C33 37 0 6 1 3 C3 0 41 27 37 32Z"
+        fill="url(#lgSide)" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+      {/* Pétalo superior-centro (violeta-rosa) */}
+      <path d="M37 32 C32 35 19 3 22 2 C25 1 42 29 37 32Z"
+        fill="url(#lgSide)" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+      {/* Pétalo superior-derecho (fino, rosa claro) */}
+      <path d="M37 32 C40 33 45 4 43 4 C41 4 33 31 37 32Z"
+        fill="url(#lgSide)" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
   );
 }
